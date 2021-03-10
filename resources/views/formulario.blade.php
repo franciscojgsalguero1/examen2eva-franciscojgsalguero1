@@ -14,7 +14,7 @@
     @endforeach
 @endif
 
-<form method="GET">
+<form method="POST" action="{{ route('formulario.store') }}>
     @csrf
     <label>
         @lang('Bussines') <br>
@@ -81,5 +81,5 @@
         <input name="dir_postal" value="{{ old( 'dir_postal') }}" placeholder="{{__('Postal Direction') }}">
     </label>
     <br>
-    <button> {{ 'Send' }}</button>
+    <button> {{ __('Send') }}</button>
 </form>

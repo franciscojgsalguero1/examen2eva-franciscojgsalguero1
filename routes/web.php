@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CenDocenteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +18,4 @@ Route::get('/', function () {
     return view('formulario');
 });
 
-
-//Route::resource('/tutores/create', TutoresController::class)->parameters(['tutores' => 'tutor'])->names(['create' => 'tutores.crear']);
+Route::resource('formulario', CenDocenteController::class);
