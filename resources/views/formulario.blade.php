@@ -18,7 +18,7 @@
     @csrf
     <label>
         @lang('Bussines') <br>
-        <input type="text" name="denominacion" value="{{ old('denominacion') }}" required>
+        <input type="text" name="denominacion" value="{{ old('denominacion') }}" placeholder="{{__('Bussines') }}" required>
         @if ($errors->has('denominacion'))
             <span class="error-message">{{ $errors->first('denominacion') }}</span>
         @endif
@@ -27,7 +27,7 @@
 
     <label>
         @lang('Codes') <br>
-        <input name="codigos" value="{{ old( 'codigos') }}">
+        <input name="codigos" value="{{ old( 'codigos') }}" placeholder="{{__('Codes') }}">
     </label>
     <br>
 
@@ -47,13 +47,13 @@
     
     <label>
         @lang('Identification') <br>
-        <input name="identificable" value="{{ old( 'identificable') }}" required>
+        <input name="identificable" value="{{ old( 'identificable') }}" placeholder="{{__('Identification') }}" required>
     </label>
     <br>
 
     <label>
         @lang('Name') <br>
-        <input type="text" name="director_nom" value="{{ old('director_nom') }}"  required>
+        <input type="text" name="director_nom" value="{{ old('director_nom') }}" placeholder="{{__('Name') }}"  required>
         @if ($errors->has('director_nom'))
             <span class="error-message">{{ $errors->first('director_nom') }}</span>
         @endif
@@ -61,7 +61,7 @@
     <br>
     <label>
         @lang('First Name') <br>
-        <input name="director_apell1" value="{{ old( 'director_apell1') }}"  required>
+        <input name="director_apell1" value="{{ old( 'director_apell1') }}" placeholder="{{__('First Name') }}" required>
         @if ($errors->has('director_apell1'))
             <span class="error-message">{{ $errors->first('director_apell1') }}</span>
         @endif
@@ -69,7 +69,7 @@
     <br>
     <label>
         @lang('Second Name') <br>
-        <input name="director_apell2" value="{{ old( 'director_apell2') }}">
+        <input name="director_apell2" value="{{ old( 'director_apell2') }}" placeholder="{{__('Second Name') }}">
         @if ($errors->has('director_apell2'))
             <span class="error-message">{{ $errors->first('director_apell2') }}</span>
         @endif
@@ -78,7 +78,7 @@
 
     <label>
         @lang('Postal Direction') <br>
-        <input name="dir_postal" value="{{ old( 'dir_postal') }}">
+        <input name="dir_postal" value="{{ old( 'dir_postal') }}" placeholder="{{__('Postal Direction') }}">
     </label>
     <br>
     <button> {{ 'Send' }}</button>
