@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CenDocenteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('formulario', [CenDocenteController::class, 'index']);
+Route::get('formulario/{formulario}', [CenDocenteController::class, 'show']);
+Route::post('formulario', [CenDocenteController::class, 'store']);
+Route::put('formulario/{formulario}', [CenDocenteController::class, 'update']);
+Route::delete('formulario/{formulario}', [CenDocenteController::class, 'delete']);

@@ -1,10 +1,6 @@
 @section('title', 'Form')
 
 <h1>@lang('Form')</h1>
-@auth
-    {{ auth()->user() }}
-    {{ auth()->user()->name }}
-@endauth
 
     @if($errors->any())
     @foreach($errors->all() as $error)
@@ -14,7 +10,7 @@
     @endforeach
 @endif
 
-<form method="POST" action="{{ route('formulario.store') }}>
+<form method="GET" action="{{ route('formulario.store') }}>
     @csrf
     <label>
         @lang('Bussines') <br>

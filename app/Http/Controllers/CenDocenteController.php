@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\CenDocente;
+use App\Http\Requests\CenDocenteRequest;
 
 class CenDocenteController extends Controller
 {
@@ -33,9 +35,11 @@ class CenDocenteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CenDocenteRequest $request)
     {
-        //
+        CenDocente::create($request->validated());
+        
+        return "Datos enviados";
     }
 
     /**
