@@ -15,16 +15,17 @@ class CreateCentrosDocentesTable extends Migration
     {
         Schema::create('centros_docentes', function (Blueprint $table) {
             $table->id();
-            $table->string('denominacion');
+            $table->string('denominacion', 40);
             $table->string('codigos');
-            $table->string('cif');
-            $table->string('dir_postal');
+            $table->string('cif', 15);
+            $table->string('titularidad')->enum('public', 'private');
+            $table->string('dir_postal')->nullable();
             $table->string('cp');
             $table->string('director_nom');
             $table->string('director_apell1');
-            $table->string('director_apell2');
-            $table->string('identificable');
-            $table->string('tipo_identificable');
+            $table->string('director_apell2')->nullable();
+            $table->string('identificador');
+            $table->string('tipo_identificable')->enum('dni', 'nie', 'passport', 'others');
             $table->timestamps();
         });
     }

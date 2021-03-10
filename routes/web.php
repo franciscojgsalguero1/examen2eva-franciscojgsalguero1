@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-    return view('examen');
+    return view('formulario');
 });
 
-Route::get('/tutores', 'TutoresController@create');
-Route::resource('/tutores/create', TutoresController::class)->parameters(['tutores' => 'tutor'])->names(['create' => 'tutores.crear']);
+
+//Route::resource('/tutores/create', TutoresController::class)->parameters(['tutores' => 'tutor'])->names(['create' => 'tutores.crear']);
