@@ -2,6 +2,16 @@
 
 <h1>@lang('Form')</h1>
 
+
+    @if(session('status'))
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            {{ session('status') }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
+
     @if($errors->any())
     @foreach($errors->all() as $error)
         <ul>
@@ -10,7 +20,7 @@
     @endforeach
 @endif
 
-<form method="GET" action="{{ route('formulario.store') }}>
+<form method="POST" action="{{ route('formulario.store') }}">
     @csrf
     <label>
         @lang('Bussines') <br>
@@ -43,7 +53,19 @@
     
     <label>
         @lang('Identification') <br>
-        <input name="identificable" value="{{ old( 'identificable') }}" placeholder="{{__('Identification') }}" required>
+        <input name="identificador" value="{{ old( 'identificador') }}" placeholder="{{__('Identificador') }}" required>
+    </label>
+    <br>
+    
+    <label>
+        @lang('CIF') <br>
+        <input name="cif" value="{{ old( 'cif') }}" placeholder="{{__('CIF') }}" required>
+    </label>
+    <br>
+    
+    <label>
+        @lang('CP') <br>
+        <input name="cp" value="{{ old( 'cp') }}" placeholder="{{__('CP') }}" required>
     </label>
     <br>
 

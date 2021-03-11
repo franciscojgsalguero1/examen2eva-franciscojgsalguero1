@@ -10,8 +10,17 @@ class CenDocente extends Model
     use HasFactory;
     
     protected $table = "cendocentes";
-    protected $fillable = ['denominacion', 'codigos', 'cif', 'titularidad', 
-        'dir_postal', 'cp', 'director_nom', 'director_apell1', 'director_apell2',
-        'identificador', 'tipo_identificable'];
+    protected $fillable = [
+        'denominacion', 
+        'codigos', 'cif', 
+        'titularidad', 
+        'dir_postal', 
+        'cp', 
+        'director_nom', 
+        'director_apell1', 
+        'director_apell2',
+        'identificador', 
+        'tipo_identificable'
+        ];
     
 }

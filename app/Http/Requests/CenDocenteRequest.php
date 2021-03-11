@@ -33,6 +33,8 @@ class CenDocenteRequest extends FormRequest
             'director_apell1' => 'required',
             'identificador' => 'required',
             'tipo_identificable' => ['required', 'in:dni,nie,passport,others'],
+            'dir_postal' => '',
+            'director_apell2' => ''
         ];
     }
 }
