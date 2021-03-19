@@ -16,7 +16,7 @@ class CenDocenteController extends Controller
      */
     public function create()
     {
-        return view('formulario');
+        return view('cendocentes');
     }
 
     /**
@@ -29,6 +29,6 @@ class CenDocenteController extends Controller
     {
         CenDocente::create($request->validated());
         
-        return redirect()->route('formulario.create')->with('status', 'El proyecto fué creado con éxito');
+        return redirect()->route('cendocentes.create')->with('status', 'El proyecto fué creado con éxito');
     }
 }

@@ -25,7 +25,7 @@ class CenDocenteRequest extends FormRequest
     {
         return [
             'denominacion' => 'required',
-            'codigos' => 'required',
+            'codigo' => 'required',
             'cif' => 'required',
             'titularidad' => 'required|in:public,private',
             'cp' => 'required',

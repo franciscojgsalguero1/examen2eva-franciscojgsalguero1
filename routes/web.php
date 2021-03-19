@@ -15,7 +15,7 @@ use App\Http\Controllers\CenDocenteController;
  */
 
 Route::get('/', function () {
-    return view('formulario');
+    return view('cendocentes');
 });
 
-Route::resource('formulario', CenDocenteController::class);
+Route::resource('cendocentes', CenDocenteController::class);

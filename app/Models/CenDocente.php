@@ -12,7 +12,8 @@ class CenDocente extends Model
     protected $table = "cendocentes";
     protected $fillable = [
         'denominacion', 
-        'codigos', 'cif', 
+        'codigo',
+        'cif', 
         'titularidad', 
         'dir_postal', 
         'cp', 

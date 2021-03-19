@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCentrosDocentesTable extends Migration
+class CreateCendocentesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCentrosDocentesTable extends Migration
      */
     public function up()
     {
-        Schema::create('centros_docentes', function (Blueprint $table) {
+        Schema::create('cendocentes', function (Blueprint $table) {
             $table->id();
             $table->string('denominacion', 40);
-            $table->string('codigos');
+            $table->string('codigo');
             $table->string('cif', 15);
             $table->string('titularidad')->enum('public', 'private');
             $table->string('dir_postal')->nullable();
@@ -37,6 +37,6 @@ class CreateCentrosDocentesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('centros_docentes');
+        Schema::dropIfExists('cendocentes');
     }
 }

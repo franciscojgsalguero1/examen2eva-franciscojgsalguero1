@@ -15,8 +15,8 @@ use App\Http\Controllers\CenDocenteController;
 |
 */
 
-Route::get('formulario', [CenDocenteController::class, 'index']);
-Route::get('formulario/{formulario}', [CenDocenteController::class, 'show']);
-Route::post('formulario', [CenDocenteController::class, 'store']);
-Route::put('formulario/{formulario}', [CenDocenteController::class, 'update']);
-Route::delete('formulario/{formulario}', [CenDocenteController::class, 'delete']);
+Route::get('cendocentes', [CenDocenteController::class, 'index']);
+Route::get('cendocentes/{cendocentes}', [CenDocenteController::class, 'show']);
+Route::post('cendocentes', [CenDocenteController::class, 'store']);
+Route::put('cendocentes/{cendocentes}', [CenDocenteController::class, 'update']);
+Route::delete('cendocentes/{cendocentes}', [CenDocenteController::class, 'delete']);
