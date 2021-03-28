@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CenDocenteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('cendocentes', [CenDocenteController::class, 'index']);
+Route::get('cendocentes/{cendocentes}', [CenDocenteController::class, 'show']);
+Route::post('cendocentes', [CenDocenteController::class, 'store']);
+Route::put('cendocentes/{cendocentes}', [CenDocenteController::class, 'update']);
+Route::delete('cendocentes/{cendocentes}', [CenDocenteController::class, 'delete']);
