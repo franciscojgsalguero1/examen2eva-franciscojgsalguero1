@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CenDocenteController;
+use App\Http\Controllers\TutoresControlles;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,10 +12,7 @@ use App\Http\Controllers\CenDocenteController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
- */
+*/
 
-Route::get('/', function () {
-    return view('cendocentes');
-});
-
-Route::resource('cendocentes', CenDocenteController::class);
+route::get('/', [TutoresControlles::class, 'create'])->name('formulario.create');
+route::get('formulario', [TutoresControlles::class, 'store'])->name('formulario.store');

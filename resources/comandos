@@ -1,0 +1,97 @@
+Algunos comandos útiles en powershell para Laravel
+
+1- Ejecutar el servidor de laravel
+
+php artisan serve
+
+2- para ver todos los comandos disponibles
+
+php artisan
+
+3- mostrar listado de rutas
+
+php artisan route:list
+
+php artisan r:l
+
+4- Crear projecto
+
+composer create-project laravel/laravel mi-proyecto-laravel
+
+5- crear controlador
+
+php artisan make:controller NombreController -r
+
+-- ver mas detalles del comando ( -h )
+
+php artisan make:controller NombreController -h
+
+6- autocargar archivos como helpers.php (en app) en el archivo composer.json (linea 42)
+
+    poner después de "autoload": { en la línea 37 del archivo
+    composer.json
+    "files": [
+        "app/helpers.php"
+        ],
+    y ejecutar
+    composer dumpautoload
+
+7- Añadir dentro de los formularios
+    (en vez de POST si falla puedes probar con GET)
+    <form method="POST" action="{{ route('formulario') }}">
+        @csrf
+        <input name="name" placeholder="Nombre..."><br>
+        <input type="email" name"email" placeholder="Email..."><br>
+        <button>Enviar<button>
+    </form>
+
+8- Crear clase para los email
+
+   php artisan make:mail MessageReceived
+
+9- Crear Modelo
+    
+    php artisan make:model Model
+
+10- Crear migraciones
+
+    php artisan make:migration create_nombre_table
+
+11- Limpiar el cache de las rutas
+    
+    php artisan route:clear
+
+12- Crear clases Request para validaciones y autorizaciones
+   
+    php artisan make:request NameProjectRequest
+
+13- Comandos para hacer lo mismo que make:auth
+
+    composer require laravel/ui
+    php artisan ui vue
+    php artisan ui vue --auth
+    npm install
+    npm run dev
+
+14- Para instalar Bootstrap
+    
+    composer require laravel/ui
+    php artisan ui bootstrap
+    php artisan ui bootstrap --auth
+    npm install
+    npm run dev
+
+15- IMPORTANTE si falla un archivo de VUE ExampleComponent.vue
+
+    en el archivo webpack.mix.js usar
+
+    mix.js('resources/js/app.js', 'public/js')
+        .sass('resources/sass/app.scss', 'public/css')
+        .vue()
+        .sourceMaps();
+16- Una vez montado todo para compilar sass
+    npm run dev
+    o
+    npm run watch (para que sea continuo)
+    (puede que tengas que hacer un hard reset
+    para que no carge desde el cache)
