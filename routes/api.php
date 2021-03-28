@@ -20,3 +20,5 @@ Route::get('cendocentes/{cendocentes}', [CenDocenteController::class, 'show']);
 Route::post('cendocentes', [CenDocenteController::class, 'store']);
 Route::put('cendocentes/{cendocentes}', [CenDocenteController::class, 'update']);
 Route::delete('cendocentes/{cendocentes}', [CenDocenteController::class, 'delete']);
+
+Route:get('pruebaparagit', [CenDocenteController::class, 'index']);
